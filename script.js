@@ -148,12 +148,11 @@ function writePassword() {
 function copyToClipboard() {
     // BONUS 
      /* Get the text field */
-  //var copyText = document.getElementById("password");
- var copyText= document.getElementById("password").select();
+   var copyText= document.getElementById("password");
 
   /* Select the text field */
- // copyText.select();
-  copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+ copyText.select();
+ // copyText.setSelectionRange(0, 99999); /*For mobile devices*/
 
   /* Copy the text inside the text field */
   document.execCommand("copy");
@@ -166,4 +165,6 @@ function copyToClipboard() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-// BONUS EVENT LISTENER
+// BONUS EVENT LISTENER for copy button
+copyBtn.addEventListener("click",copyToClipboard);
+
