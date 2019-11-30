@@ -10,7 +10,7 @@ var passLength = 0;
 var valid_passlength = false;
 
 //Prompt for length  of Password
-var passLength = prompt("Enter length of password between 8 and 128")
+var passLength = prompt("Enter length of password between 8 and 128 characters")
 
 //check length to be between 8 and 128
 while (passLength < 8 || passLength > 128) {
@@ -20,14 +20,20 @@ while (passLength < 8 || passLength > 128) {
 }
 
 
-//Prompt for type of characters Need to check if something is selected
-var isLower = confirm("Would you like lower case letter in your password?");
-var isUpper = confirm("Would you like upper case letters in your password?");
-var isSpecial = confirm("Would you like special Characters in your password?");
-var isNum = confirm("Would you like numbers in your password?");
+//Prompt for type of characters if none is selected will continue to prompt
+//Intialize all boolean to false for each character type
+var isLower = false; var isUpper = false; var isSpecial = false; var isNum=false;
 
-//Check if at least one character type has been selected, if not continue prompting.
+while (isLower == false && isUpper == false &&  isSpecial == false && isNum ==false){
+    alert("You must Select at Least One Character Type");
+    isLower = confirm("Would you like lower case letters in your password?");
+    isUpper = confirm("Would you like upper case letters in your password?");
+    isSpecial = confirm("Would you like special characters in your password?");
+    isNum = confirm("Would you like numbers in your password?");
+ }
 
+alert("You have selected: \r\n lower case: " + isLower + "\r\n" + "upper case: " + isUpper + "\r\n" + "special characters: " + isSpecial + "\r\n" + "numbers: " + isNum+ "\r\n \r\n CLICK ON GENERATE PASSWORD BUTTON");
+//log all the char selections
 console.log("isLower = " + isLower);
 console.log("isUpper= " + isUpper)
 console.log("isLower = " + isSpecial);
@@ -36,7 +42,7 @@ console.log("isNum= " + isNum);
 
 
 function generatePassword() {
-    //YOUR CODE HERE
+    //This function will execute when Generate Password button is clicked
     //Initialize all Strings for each character type
     var specialChars = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
     var lowChars = "abcdefghijklmnopqrstuvwxyz";
@@ -141,7 +147,21 @@ function writePassword() {
 
 function copyToClipboard() {
     // BONUS 
-}
+     /* Get the text field */
+  //var copyText = document.getElementById("password");
+ var copyText= document.getElementById("password").select();
+
+  /* Select the text field */
+ // copyText.select();
+  copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  alert("Copied the text: " + copyText.value);
+} 
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
