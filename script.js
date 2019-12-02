@@ -25,7 +25,7 @@ while (passLength < 8 || passLength > 128) {
 var isLower = false; var isUpper = false; var isSpecial = false; var isNum=false;
 
 while (isLower == false && isUpper == false &&  isSpecial == false && isNum ==false){
-    alert("You must Select at Least One Character Type");
+    alert("You must Select at least One Character Type: lower case, upper case, special chars or numbers");
     isLower = confirm("Would you like lower case letters in your password?");
     isUpper = confirm("Would you like upper case letters in your password?");
     isSpecial = confirm("Would you like special characters in your password?");
@@ -127,10 +127,6 @@ function generatePassword() {
     }
 
     return password;
-
-    //Prompt for 
-   // alert("ive been clicked");
-   // return "password";
    
 }
 

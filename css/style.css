@@ -1,0 +1,23 @@
+.container{
+    margin: 0 auto;
+}
+
+body{
+    background-color: lightgray;
+}
+
+#generate{
+    background: lightseagreen;
+}
+
+#password{
+    width: 850px;
+}
+/* 
+h1{
+   text-align: left; 
+}
+
+h2{
+    text-align: left;
+} */
