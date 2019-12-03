@@ -32,7 +32,7 @@ while (isLower == false && isUpper == false &&  isSpecial == false && isNum ==fa
     isNum = confirm("Would you like numbers in your password?");
  }
 
-alert("You have selected: \r\n lower case: " + isLower + "\r\n" + "upper case: " + isUpper + "\r\n" + "special characters: " + isSpecial + "\r\n" + "numbers: " + isNum+ "\r\n \r\n CLICK ON GENERATE PASSWORD BUTTON");
+alert("You have selected: \r\n lower case: " + isLower + "\r\n" + "upper case: " + isUpper + "\r\n" + "special characters: " + isSpecial + "\r\n" + "numbers: " + isNum+  "\r\n" + "The password length: " + passLength + "\r\n \r\n CLICK ON GENERATE PASSWORD BUTTON");
 //log all the char selections
 console.log("isLower = " + isLower);
 console.log("isUpper= " + isUpper)
