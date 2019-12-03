@@ -2,7 +2,7 @@
 <h2> Password Generator<h2>
 <p>
     The password generator application upon browser opening will prompt for the length of the password desired.  The length must be between 8 and 128 characters or the alert will continue
-    prompting.  Then a series of alerts will prompt for character types to be included in the password. The choices are numbers, special characters, upper case, and lower case letters.  At least on character type must be chosen or it will continue prompting. Then the user must click on the Generate Password button to make the password appear in the textbox.
+    prompting.  Then a series of alerts will prompt for character types to be included in the password. The choices are numbers, special characters, upper case, and lower case letters.  At least one character type must be chosen or it will continue prompting. Then the user must click on the Generate Password button to make the password appear in the textbox.
 </p>
 
 <p>
